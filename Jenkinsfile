@@ -20,7 +20,7 @@ pipeline {
 
 	stage('Build') { 
             steps { 
-               withDockerRegistry([credentialsId: "dockerlogin", url: "https://hub.docker.com"]) {
+               withDockerRegistry([credentialsId: "dockerlogin", url: ""]) {
                  script{
                  app =  docker.build("iric3")
                  }
